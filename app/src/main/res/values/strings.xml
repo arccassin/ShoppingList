@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ShoppingList</string>
+    <string name="tvNameProductList">Список продуктов</string>
+    <string name="tvNameClothesList">Список одежды</string>
+    <string name="tvNameInstrumentsList">Список инструментов</string>
+    <string name="tvNameHouseHoldGoodsList">Список хозтоваров</string>
+    <string name="edit_text_products_hint">Вы хотите купить...</string>
+    <string name="button_add">Добавить</string>
+    <string name="button_remove">Удалить</string>
+
+    <string-array name="list_view_items">
+        <item>Продукты</item>
+        <item>Одежда</item>
+        <item>Инструменты</item>
+        <item>Хозтовары</item>
+    </string-array>
+</resources>
