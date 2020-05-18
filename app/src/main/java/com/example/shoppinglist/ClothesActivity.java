@@ -35,7 +35,7 @@ public class ClothesActivity extends AppCompatActivity {
         }
 
         listView = findViewById(R.id.list_view_clothes);
-        arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_single_choice, arrayList);
+        arrayAdapter = new ArrayAdapter<>(this, R.layout.my_simple_list_single_choice, arrayList);
         listView.setAdapter(arrayAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

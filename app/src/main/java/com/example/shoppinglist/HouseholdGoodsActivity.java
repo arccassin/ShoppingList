@@ -34,7 +34,7 @@ public class HouseholdGoodsActivity extends AppCompatActivity {
             arrayList.add(preferences.getString(String.valueOf(i), ""));
         }
         listView = findViewById(R.id.list_view_household_goods);
-        arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_single_choice, arrayList);
+        arrayAdapter = new ArrayAdapter<>(this, R.layout.my_simple_list_single_choice, arrayList);
         listView.setAdapter(arrayAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

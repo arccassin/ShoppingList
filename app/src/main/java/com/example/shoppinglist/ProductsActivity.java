@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ProductsActivity extends AppCompatActivity {
 
@@ -37,8 +38,9 @@ public class ProductsActivity extends AppCompatActivity {
             arrayList.add(preferences.getString(String.valueOf(i), ""));
         }
         listView = findViewById(R.id.list_view_products);
-        arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_single_choice, arrayList);
+        arrayAdapter = new ArrayAdapter<>(this, R.layout.my_simple_list_single_choice, arrayList);
         listView.setAdapter(arrayAdapter);
+        listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
