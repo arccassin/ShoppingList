@@ -34,7 +34,7 @@ public class ClothesActivity extends AppCompatActivity {
             arrayList.add(preferences.getString(String.valueOf(i), ""));
         }
 
-        listView = findViewById(R.id.list_view_clothes);
+        listView = findViewById(R.id.list_view);
         arrayAdapter = new ArrayAdapter<>(this, R.layout.my_simple_list_single_choice, arrayList);
         listView.setAdapter(arrayAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -46,7 +46,7 @@ public class ClothesActivity extends AppCompatActivity {
     }
 
     public void onClickButtonAdd(View view) {
-        EditText editText = findViewById(R.id.edit_text_clothes);
+        EditText editText = findViewById(R.id.edit_text);
         String item = editText.getText().toString();
         if (item.equals("")) {
             Toast toast = Toast.makeText(this, "Добавьте покупку!", Toast.LENGTH_SHORT);

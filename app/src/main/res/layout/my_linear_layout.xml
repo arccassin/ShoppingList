@@ -4,14 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InstrumentsActivity"
     android:orientation="vertical"
-    android:layout_margin="20dp">
+    tools:context=".ClothesActivity"
+    android:layout_margin="20dp"
+    android:id="@+id/include_layout">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/tvNameInstrumentsList"
+        android:text="@string/tvNameClothesList"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,7 +22,7 @@
         app:layout_constraintVertical_bias="0.022" />
 
     <EditText
-        android:id="@+id/edit_text_instruments"
+        android:id="@+id/edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"
@@ -43,8 +45,8 @@
     </LinearLayout>
 
     <ListView
-        android:id="@+id/list_view_instruments"
+        android:id="@+id/list_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:choiceMode="singleChoice"/>
+        android:choiceMode="singleChoice" />
 </LinearLayout>

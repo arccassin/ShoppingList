@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,13 +28,16 @@ public class HouseholdGoodsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_household_goods);
 
+        TextView textView = findViewById(R.id.textView);
+        textView.setText(R.string.tvNameHouseHoldGoodsList);
+
         arrayList = new ArrayList<>();
 
         SharedPreferences preferences = getSharedPreferences(PREFERENCES, MODE_PRIVATE);
         for (int i = 0; i < preferences.getInt("length", 0); i++) {
             arrayList.add(preferences.getString(String.valueOf(i), ""));
         }
-        listView = findViewById(R.id.list_view_household_goods);
+        listView = findViewById(R.id.list_view);
         arrayAdapter = new ArrayAdapter<>(this, R.layout.my_simple_list_single_choice, arrayList);
         listView.setAdapter(arrayAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -45,7 +49,7 @@ public class HouseholdGoodsActivity extends AppCompatActivity {
     }
 
     public void onClickButtonAdd(View view) {
-        EditText editText = findViewById(R.id.edit_text_household_goods);
+        EditText editText = findViewById(R.id.edit_text);
         String item = editText.getText().toString();
         if (item.equals("")) {
             Toast toast = Toast.makeText(this, "Добавьте покупку!", Toast.LENGTH_SHORT);
