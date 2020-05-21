@@ -8,44 +8,5 @@
     android:orientation="vertical"
     android:layout_margin="20dp">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/tvNameProductList"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
-
-    <EditText
-        android:id="@+id/edit_text_products"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:hint="@string/edit_text_products_hint"/>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <Button
-            android:text="@string/button_add"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onClickButtonAdd"/>
-        <Button
-            android:text="@string/button_remove"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onClickButtonRemove"/>
-    </LinearLayout>
-
-    <ListView
-        android:id="@+id/list_view_products"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:choiceMode="singleChoice"/>
+    <include layout="@layout/my_linear_layout"/>
 </LinearLayout>

@@ -8,6 +8,6 @@
     android:orientation="vertical"
     android:layout_margin="20dp">
 
-    <include android:layout="@layout/my_linear_layout"
+    <include layout="@layout/my_linear_layout"
         android:id="@+id/include_layout"/>
 </LinearLayout>

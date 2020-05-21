@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context=".ClothesActivity">
 
-    <include android:layout="@layout/my_linear_layout"/>
+    <include layout="@layout/my_linear_layout"/>
 
 
 </LinearLayout>

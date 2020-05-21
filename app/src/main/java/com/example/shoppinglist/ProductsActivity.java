@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.lang.reflect.Array;
@@ -33,11 +34,15 @@ public class ProductsActivity extends AppCompatActivity {
 
         arrayList = new ArrayList<>();
 
+        TextView textView = findViewById(R.id.textView);
+        textView.setText(R.string.tvNameProductList);
+
+
         SharedPreferences preferences = getSharedPreferences(PREFERENCES, MODE_PRIVATE);
         for (int i = 0; i < preferences.getInt("length", 0); i++) {
             arrayList.add(preferences.getString(String.valueOf(i), ""));
         }
-        listView = findViewById(R.id.list_view_products);
+        listView = findViewById(R.id.list_view);
         arrayAdapter = new ArrayAdapter<>(this, R.layout.my_simple_list_single_choice, arrayList);
         listView.setAdapter(arrayAdapter);
         listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
@@ -50,7 +55,7 @@ public class ProductsActivity extends AppCompatActivity {
     }
 
     public void onClickButtonAdd(View view) {
-        EditText editText = findViewById(R.id.edit_text_products);
+        EditText editText = findViewById(R.id.edit_text);
         String item = editText.getText().toString();
         if (item.equals("")) {
             Toast toast = Toast.makeText(this, "Добавьте покупку!", Toast.LENGTH_SHORT);
